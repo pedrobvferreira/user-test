@@ -1,4 +1,4 @@
-package main.java.com.user.usertest.model;
+package com.user.usertest.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
