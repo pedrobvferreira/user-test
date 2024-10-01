@@ -1,4 +1,4 @@
-package main.java.com.user.usertest.controller;
+package com.user.usertest.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
