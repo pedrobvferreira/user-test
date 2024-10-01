@@ -1,6 +1,6 @@
-package main.java.com.user.usertest.dto;
+package com.user.usertest.dto;
 
-import main.java.com.user.usertest.model.User;
+import com.user.usertest.model.User;
 import lombok.Data;
 
 @Data
