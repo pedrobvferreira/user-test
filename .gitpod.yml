@@ -5,6 +5,9 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - init: mvn install -DskipTests=false
+  - init: |
+      sdk install java 17.0.12-amzn
+      sdk use java 17.0.12-amzn
+      mvn install -DskipTests=false
 
 
