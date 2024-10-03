@@ -1,6 +1,7 @@
 tasks:
-  - init: sdk install java 17.0.12-amzn
-  - init: sdk use java 17.0.12-amzn
-  - init: mvn install -DskipTests=false
-
-
+  - name: Set up Java and build project
+    init: |
+      sdk install java 17.0.12-amzn
+      sdk use java 17.0.12-amzn
+      java -version  # Verifique se o Java 17 foi ativado corretamente
+      mvn install -DskipTests=false
