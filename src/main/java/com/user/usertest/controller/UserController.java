@@ -18,6 +18,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @GetMapping
+    private ResponseEntity<?> getAllPersons() {
+    	var listPersons = userService.getAllUsers();
+        return ResponseEntity.status(HttpStatus.OK).body(listPersons);
+    }
+
     @GetMapping("/{id}")
     private ResponseEntity<?> getUserById(@PathVariable("id") Long id) {
 		var user = userService.getUserById(id);

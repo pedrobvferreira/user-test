@@ -1,5 +1,8 @@
 package com.user.usertest.service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +16,12 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    public List<UserDTO> getAllUsers() {
+        return userRepository.findAll().stream()
+          .map(UserDTO::toDTO)
+          .collect(Collectors.toList());
+    }
 
     public UserDTO getUserById(Long id) {
         User user = userRepository.findById(id)
